@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SpotifyConsumingApp</string>
+    <string name="search">Artist name</string>
+    <string name="followers">Followers</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="go_album">Play Album!</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/first_touch_selector"
+    android:paddingBottom="@dimen/first_list_item_vertical_padding"
+    android:paddingTop="@dimen/first_list_item_vertical_padding">
+
+     <android.support.constraint.Guideline
+        android:id="@+id/horizontal_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="0dp"/>
+ <TextView
+        android:id="@+id/artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/artist_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Carlos Vives"/>
+
+    <!-- Icon indicating weather condition -->
+    <ImageView
+        android:id="@+id/artist_icon"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/horizontal_middle"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/ic_launcher"/>
+
+
+
+    <RatingBar
+        android:id="@+id/artist_popularity_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/horizontal_middle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/artist_icon"
+        android:numStars="5"
+        android:isIndicator="true"
+        android:stepSize="0.01"
+
+        android:scaleX=".7"
+        android:scaleY=".7"
+
+        />
+    <TextView
+        android:id="@+id/artist_popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@+id/artist_popularity_rating"
+        app:layout_constraintLeft_toLeftOf="@+id/artist_popularity_rating"
+        app:layout_constraintRight_toRightOf="@+id/artist_popularity_rating"
+        tools:text="80/100"/>
+
+    <TextView
+        android:id="@+id/followers_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintLeft_toLeftOf="@+id/artist_icon"
+        app:layout_constraintRight_toRightOf="@+id/artist_icon"
+        app:layout_constraintTop_toBottomOf="@+id/artist_popularity"
+        android:text="@string/followers"/>
+   <TextView
+        android:id="@+id/artist_followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/followers_label"
+        app:layout_constraintLeft_toLeftOf="@+id/artist_popularity"
+        app:layout_constraintRight_toRightOf="@+id/artist_popularity"
+        tools:text="250.000"/>
+
+</android.support.constraint.ConstraintLayout>
